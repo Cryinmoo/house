@@ -19,6 +19,8 @@
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <link rel="stylesheet" href="js/themify-icons.css">
+  
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
@@ -32,106 +34,75 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
 </head>
 
-<body>
-
-   <!--header section start -->
+<body>   <!--header section start -->
+  <script>jQuery(function($) {
+    $(window).on('scroll', function() {
+		if ($(this).scrollTop() >= 200) {
+			$('.navbar').addClass('fixed-top');
+		} else if ($(this).scrollTop() == 0) {
+			$('.navbar').removeClass('fixed-top');
+		}
+	});
+	
+	function adjustNav() {
+		var winWidth = $(window).width(),
+			dropdown = $('.dropdown'),
+			dropdownMenu = $('.dropdown-menu');
+		
+		if (winWidth >= 768) {
+			dropdown.on('mouseenter', function() {
+				$(this).addClass('show')
+					.children(dropdownMenu).addClass('show');
+			});
+			
+			dropdown.on('mouseleave', function() {
+				$(this).removeClass('show')
+					.children(dropdownMenu).removeClass('show');
+			});
+		} else {
+			dropdown.off('mouseenter mouseleave');
+		}
+	}
+	
+	$(window).on('resize', adjustNav);
+	
+	adjustNav();
+});</script>
+<span class="ti-download"></span>
    <body class="sub_page">
-    <div class="hero_area">
-      <!-- header section strats -->
-      <header class="header_section">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-            <a class="navbar-brand" href="index.html">
-              <span>
-                Przeprowadzki Kraków – firma przeprowadzkowa
-              </span>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-  
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <div class="d-flex ml-auto flex-column flex-lg-row align-items-center">
-                <ul class="navbar-nav  ">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Strona Głowna <span class="sr-only">(current)</span></a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#about"> O nas </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#kontakt"> Czym się zajmujemy </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <header class="header-area overlay" style="background-image: url('images/a-1.jpg');">
+      <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a href="#" class="navbar-brand">Przeprowadzki Kraków</a>
+        
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+          <span class="menu-icon-bar"></span>
+        </button>
+        
+        <div id="main-nav" class="collapse navbar-collapse">
+          <ul class="navbar-nav ml-auto">
+            <li><a href="#" class="nav-item nav-link active">Strona Głowna</a></li>
+            <li><a href="#" class="nav-item nav-link">O nas</a></li>
+            <li class="dropdown">
+              <a href="#" class="nav-item nav-link" data-toggle="dropdown">Czym się zajmujemy</a>
+          </ul>
         </div>
-      </header>
-      <!-- end header section -->
-    </div>
- <!--header section end -->
-
- <header>
-  <div class="owl-carousel owl-theme">
-      <div class="item">
-          <img src="images/a-1.jpg" alt="">
-          <div class="cover">
-              <div class="container">
-                  <div class="header-content">
-                      <div class="line"></div>
-                      <h2>Reinvent Business Experience with</h2>
-                      <h1>Our Global and Integrated Solutions</h1>
-                      <h4>We help entrepreneurs, start-ups and enterprises shape their ideas into business</h4>
-                  </div>
-              </div>
-           </div>
-      </div>                    
-      <div class="item">
-          <img src="images/a-2.jpg" alt="">
-          <div class="cover">
-              <div class="container">
-                  <div class="header-content">
-                      <div class="line animated bounceInLeft"></div>
-                      <h2>Reinvent Digital Experience with</h2>
-                      <h1>Our Digital and Intelligent Solutions</h1>
-                      <h4>We help entrepreneurs, start-ups and enterprises shape their dreams into profits</h4>
-                  </div>
-              </div>
-           </div>
-      </div>                
-      <div class="item">
-          <img src="images/a-3.jpg" alt="">
-          <div class="cover">
-              <div class="container">
-                  <div class="header-content">
-                      <div class="line animated bounceInLeft"></div>
-                      <h2>Reinvent Client Experience with</h2>
-                      <h1>Our CRM and Software Solutions</h1>
-                      <h4>We help entrepreneurs, start-ups and enterprises shape their leads into clients</h4>
-                  </div>
-              </div>
-           </div>
       </div>
-  </div>
-</header>
+    </nav>
+    
+    <div class="banner">
+      <div class="container">
+        <h1>Przeprowadzki Kraków - Firma przeprowadzkowa.</h1>
+        <p>Pomożemy ci w przeprowadzce z każdą możliwą rzeczą. </p>
+      </div>
+    </div>
+  </header>
 
-<script type="text/javascript">
-  $(".owl-carousel").owlCarousel({
-    loop: true,
-    margin: 0,
-    navText: [],
-    center: true,
-    autoplay: true,
-    autoplayTimeout:5000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1
-      }
-    }
-  });
-</script>
+  <section class="target_section layout_padding2 ">
+   
+  </section>
 
 
 
@@ -247,15 +218,15 @@
   
     <!-- end target section -->
 
-  <section class="container-fluid bg-light" id="about">
-    <div class="col-md-12"></div>
+  <section class="container-fluid bg-light py-5" id="about">
+    <div class="col-md-6"></div>
     <div class="row justify-content-center">
-        <img src="images/w-1.png" class="img-fluid mx-auto rounded-4 mt-5 align-items-center">
+        <img src="images/a-3.jpg" class="img-fluid">
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 text-center mt-3 my-3"> 
-        <p class="fs-1 font-weight-bold">Przeprowadzki Kraków – firma przeprowadzkowa</p>
+       <h2> Przeprowadzki Kraków – firma przeprowadzkowa </h2>
         </div>
         <div class="container">
             <div class="row mb-5">
@@ -288,7 +259,7 @@
                     </p>
                 </div>  
             </div>
-            <div class="col-xl-5 col-lg-6"><img class="img-fluid mb-3 mb-lg-0" src="assets/img/egypt-9.jpg" alt="..." /></div>
+            <div class="col-xl-5 col-lg-6"><img class="img-fluid mb-3 mb-lg-0" src="images/nav-bg.jpg" alt="..." /></div>
         </div>
         </div>
       </section>
@@ -298,22 +269,26 @@
 
 
   <!-- who section -->
+  <section class="do_section layout_padding bg-light">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Gdzie znaleźć rzetelną firmę?
+        </h2>
+      </div>
+      </div>
+      </section>
 
   <section class="who_section layout_padding bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
+            <img src="images/a-4.jpg" alt="">
           </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
           <div class="detail-box">
-            <div class="heading_container">
-              <h2>
-                Gdzie znaleźć rzetelną firmę?
-              </h2>
-            </div>
             <p>
               Kiedy wizja zmiany otoczenia jest coraz bliżej, warto rozważyć opcję przeprowadzki za pomocą firmy. Bez trudu znajdziesz 
               <b> firmy transportowe w Krakowie </b>, choćby za pośrednictwem naszego portalu. Może i rzeczy osobiste łatwo jest wywieźć własnym samochodem osobowym do nowego miejsca zamieszkania, jednak z meblami i sprzętami domowymi już nie jest tak prosto i przyjemnie. Nie ma sensu samodzielnie męczyć się z meblami, skoro wystarczy tylko wyszukać firmę, która zaoferuje 
@@ -331,12 +306,12 @@
   <section class="who_section layout_padding">
     <div class="container">
       <div class="row flex-row-reverse">
-        <div class="col-md-5">
+        <div class="col-md-6">
           <div class="img-box">
-            <img src="images/who-img.jpg" alt="">
+            <img src="images/a-2.jpg" alt="">
           </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-6">
           <div class="detail-box">
             <div class="heading_container">
 
@@ -357,188 +332,12 @@
    
   </section>
 
-  <section class="do_section layout_padding bg-light">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Jak mogę zabrać rzeczy z domu?
-        </h2>
-      </div>
-      </div>
-      </section>
-  
-  <section class="projects-section ">
-  
-    <div class="container px-6 px-lg-6 overflow-hidden mb-5 mt-5" >
-        <div class="row no-gutters">
-            <div class="text-center pb-4">
-            </div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <p class="mb-0 text-center">
-            Jeśli musisz zwolnić mieszkanie, oznacza to, że potrzebna jest Ci pomoc przy przeprowadzce. Zabranie wszystkich swoich rzeczy z mieszkania, w którym do tej pory gromadziło się rzeczy, wydaje się łatwym zadaniem, 
-            jednak wiąże się to z pewnymi niedogodnościami. Problem pojawia się wtedy, gdy trzeba znieść i przewieźć duże przedmioty. Samodzielne zniesienie lodówki, meblościanki, czy kanapy wymaga nie tylko siły, zręczności i 
-            pomocy drugiej osoby, ale także odpowiedniego pojazdu, który przetransportuje wszystkie te gabaryty we wskazane miejsce. Tutaj firma oferująca 
-            <strong>transport mebli w Krakowie </strong> będzie kluczowym aspektem pomocy. 
-          </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <p class="mb-0 py-5 text-center">
-            Pracownicy takiej firmy z pewnością dołożą wszelkich starań, aby pomóc klientowi znieść wszystkie te niewygodne w przenoszeniu elementy wyposażenia, 
-            a także zabezpieczą je w trakcie transportu, aby nie doszło do uszkodzenia. 
-            <b>Firmy transportowe w Krakowie</b> mają ogromne doświadczenie w tym zakresie, dlatego doskonale wiedzą, w jaki sposób zabezpieczyć mienie. 
-            <b>Transport mebli w Krakowie</b>> nie musi oznaczać uszkodzeń wyposażenia nowego mieszkania, ponieważ pracownicy wiedzą, jak się obchodzić z takimi elementami i jak je zabezpieczyć. 
-        </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <p class="mb-0 py-5 text-center">
-            Samodzielne transportowanie mebli samochodem osobowym jest po pierwsze niewygodne, po drugie czasochłonne (w końcu nie będziesz w stanie zabrać wszystkich rzeczy za pierwszym kursem), 
-            a także niebezpieczne, zwłaszcza jeśli nie wiesz, jak przewozić meble i jak je zabezpieczyć. Właśnie z tego powodu znacznie lepszym pomysłem jest wynajęcie specjalistów, którzy oferują <b>przeprowadzki w Krakowie</b>> i w innych rejonach.                           
-        </p>
-        </div>
-      </div>
-      </div>
-  </section>
-
-  
-
-
-  <!-- nav section -->
-  <section class="info_section " id="kontakt">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_contact">
-            <h5>
-              About Shop
-            </h5>
-            <div>
-              <div class="img-box">
-                <img src="images/location-white.png" width="18px" alt="">
-              </div>
-              <p>
-                Address
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/telephone-white.png" width="12px" alt="">
-              </div>
-              <p>
-                +01 1234567890
-              </p>
-            </div>
-            <div>
-              <div class="img-box">
-                <img src="images/envelope-white.png" width="18px" alt="">
-              </div>
-              <p>
-                demo@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Informations
-            </h5>
-            <p>
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-            </p>
-          </div>
-        </div>
-
-        <div class="col-md-3">
-          <div class="info_insta">
-            <h5>
-              Instagram
-            </h5>
-            <div class="insta_container">
-              <div>
-                <a href="">
-                  <div class="insta-box b-1">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-2">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-              <div>
-                <a href="">
-                  <div class="insta-box b-3">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-                <a href="">
-                  <div class="insta-box b-4">
-                    <img src="images/insta.png" alt="">
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Newsletter
-            </h5>
-            <form action="">
-              <input type="email" placeholder="Enter your email">
-              <button>
-                Subscribe
-              </button>
-            </form>
-            <div class="social_box">
-              <a href="">
-                <img src="images/fb.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/twitter.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/linkedin.png" alt="">
-              </a>
-              <a href="">
-                <img src="images/youtube.png" alt="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- end info_section -->
-
 
   <!-- footer section -->
   <section class="container-fluid footer_section">
     <p>
-      &copy; 2020 All Rights Reserved By
-      <a href="https://html.design/">Free Html Templates</a>
+      &copy; 2023 All Rights Reserved By
+      <a href="https://html.design/">Przeprowadzki Kraków</a>
     </p>
   </section>
   <!-- footer section -->
