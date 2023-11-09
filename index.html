@@ -21,6 +21,9 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
   <link rel="stylesheet" href="js/themify-icons.css">
   
+  <!-- Animation-->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- fonts style -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,700&display=swap" rel="stylesheet">
@@ -32,9 +35,18 @@
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"> </script>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
 </head>
 
 <body>   <!--header section start -->
+
+  <script>
+    AOS.init();
+</script>
   <script>jQuery(function($) {
     $(window).on('scroll', function() {
 		if ($(this).scrollTop() >= 200) {
@@ -68,6 +80,10 @@
 	
 	adjustNav();
 });</script>
+<script>
+
+</script>
+
 <span class="ti-download"></span>
    <body class="sub_page">
     <header class="header-area overlay" style="background-image: url('images/a-1.jpg');">
@@ -84,9 +100,6 @@
         <div id="main-nav" class="collapse navbar-collapse">
           <ul class="navbar-nav ml-auto">
             <li><a href="#" class="nav-item nav-link active">Strona Głowna</a></li>
-            <li><a href="#" class="nav-item nav-link">O nas</a></li>
-            <li class="dropdown">
-              <a href="#" class="nav-item nav-link" data-toggle="dropdown">Czym się zajmujemy</a>
           </ul>
         </div>
       </div>
@@ -104,124 +117,12 @@
    
   </section>
 
-
-
-  <!-- do section -->
-
-  <section class="do_section layout_padding">
-    <div class="container">
-      <div class="heading_container">
-        <h2>
-          Czym się zajmujemy
-        </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna
-        </p>
-      </div>
-      <div class="do_container">
-        <div class="box arrow-start arrow_bg">
-          <div class="img-box">
-            <img src="images/d-1.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Wycena
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-middle arrow_bg">
-          <div class="img-box">
-            <img src="images/d-2.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Przeprowadzki
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-middle arrow_bg">
-          <div class="img-box">
-            <img src="images/d-3.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Przewóz
-            </h6>
-          </div>
-        </div>
-        <div class="box arrow-end arrow_bg">
-          <div class="img-box">
-            <img src="images/d-4.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Montaż
-            </h6>
-          </div>
-        </div>
-        <div class="box ">
-          <div class="img-box">
-            <img src="images/d-5.png" alt="">
-          </div>
-          <div class="detail-box">
-            <h6>
-              Zadowolenie
-            </h6>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  </section>
-
-  <!-- end do section -->
-    <!-- target section -->
-    <section class="target_section ">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4 col-sm-6">
-            <div class="detail-box">
-              <h2>
-                10+
-              </h2>
-              <h5>
-               Lat w biznesie
-              </h5>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="detail-box">
-              <h2>
-                300+
-              </h2>
-              <h5>
-                Wykonanych przprowdzek
-              </h5>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-            <div class="detail-box">
-              <h2>
-                300+
-              </h2>
-              <h5>
-                Zadowolonych klientów
-              </h5>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-6">
-          </div>
-        </div>
-      </div>
-    </section>
   
-    <!-- end target section -->
 
-  <section class="container-fluid bg-light py-5" id="about">
+  <section class="container-fluid bg-light py-5" id="about" data-aos="fade-up" data-aos-duration="1000">
     <div class="col-md-6"></div>
     <div class="row justify-content-center">
-        <img src="images/a-3.jpg" class="">
+        <img src="images/a-3.jpg" class="img-fluid">
       </div>
     </div>
     <div class="row">
@@ -247,7 +148,7 @@
 
 
   <section class="about-section bg-white"  >
-    <div class="container px-lg-6 overflow-hidden" data-aos="zoom-in-up">
+    <div class="container px-lg-6 overflow-hidden" data-aos="zoom-in-up" data-aos-duration="1000">
         <div class="row gx-5 mb-lg-2 align-items-center py-5">  
             <div class="col-xl-7 col-lg-6">
                 <div class="featured-text text-center ">
@@ -280,7 +181,7 @@
       </section>
 
       
-  <section class="who_section layout_padding bg-light fs-4">
+  <section class="who_section layout_padding bg-light fs-4" data-aos="fade-down" data-aos-duration="1000">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
@@ -290,7 +191,7 @@
         </div>
         <div class="col-md-6">
           <div class="detail-box">
-            <p>
+            <p class="fs-4 font-italic text-center text-black mb-0">
               Kiedy wizja zmiany otoczenia jest coraz bliżej, warto rozważyć opcję przeprowadzki za pomocą firmy. Bez trudu znajdziesz 
               <b> firmy transportowe w Krakowie </b>, choćby za pośrednictwem naszego portalu. Może i rzeczy osobiste łatwo jest wywieźć własnym samochodem osobowym do nowego miejsca zamieszkania, jednak z meblami i sprzętami domowymi już nie jest tak prosto i przyjemnie. Nie ma sensu samodzielnie męczyć się z meblami, skoro wystarczy tylko wyszukać firmę, która zaoferuje 
               <b>transport mebli, Kraków </b> jest jednym z tych miejsc, gdzie nie brakuje firm świadczących takie usługi. 
@@ -304,7 +205,7 @@
     </div>
   </section>
 
-  <section class="who_section layout_padding">
+  <section class="who_section layout_padding" data-aos="fade-down" data-aos-duration="1000">
     <div class="container">
       <div class="row flex-row-reverse">
         <div class="col-md-6">
@@ -317,7 +218,7 @@
             <div class="heading_container">
 
             </div>
-            <p>
+            <p class="fs-4 font-italic text-center text-black mb-0">
               Jeśli szukasz firmy, która pomoże ci jedynie z osobistymi rzeczami, z pewnością przyda Ci się 
               <b>bagażówka, w Krakowie </b> będziesz miał możliwość skorzystać z takiej firmy. Jeśli nie masz pomysłu jak szukać, możesz od razu wejść na nasz serwis, gdzie czekają na Ciebie oferty firm. Bez trudu znajdziesz u nas 
               <b>taxi bagażowe w Krakowie, </b> gdzie będziesz mógł przewieźć rzeczy, oczekując pomocy w przenoszeniu na miejsce. Wszystkie te firmy, które znajdziesz w naszym serwisie to sprawdzone i zaufane przedsiębiorstwa, które od lat służą swoim klientom.
@@ -330,42 +231,58 @@
     </div>
   </section>
 
-  <section class="projects-section">
-    <div class="container px-6 px-lg-6 overflow-hidden mb-5 mt-5" >
-        <div class="row no-gutters">
-            <div class="text-center pb-4">
+  <section class="container-fluid bg-light py-5" id="about" data-aos="fade-down" data-aos-duration="1000">
+    <div class="col-md-6"></div>
+    <div class="row">
+        <div class="container">
+            <div class="row mb-5">
+              <div class="col">
+              </div>
+              <div class="col-12">
+                <p class="fs-4 font-italic text-center text-black mb-0 ">
+                    Jeśli musisz zwolnić mieszkanie, oznacza to, że potrzebna jest Ci pomoc przy przeprowadzce. Zabranie wszystkich swoich rzeczy z mieszkania, w którym do tej pory gromadziło się rzeczy, wydaje się łatwym zadaniem, 
+                    jednak wiąże się to z pewnymi niedogodnościami. Problem pojawia się wtedy, gdy trzeba znieść i przewieźć duże przedmioty. Samodzielne zniesienie lodówki, meblościanki, czy kanapy wymaga nie tylko siły, zręczności i 
+                    pomocy drugiej osoby, ale także odpowiedniego pojazdu, który przetransportuje wszystkie te gabaryty we wskazane miejsce. Tutaj firma oferująca 
+                    <strong>transport mebli w Krakowie </strong> będzie kluczowym aspektem pomocy. 
+                  </p>
+              </div>
+              <div class="col">
+              </div>
             </div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-          <p class="mb-0 text-center">
-            Jeśli musisz zwolnić mieszkanie, oznacza to, że potrzebna jest Ci pomoc przy przeprowadzce. Zabranie wszystkich swoich rzeczy z mieszkania, w którym do tej pory gromadziło się rzeczy, wydaje się łatwym zadaniem, 
-            jednak wiąże się to z pewnymi niedogodnościami. Problem pojawia się wtedy, gdy trzeba znieść i przewieźć duże przedmioty. Samodzielne zniesienie lodówki, meblościanki, czy kanapy wymaga nie tylko siły, zręczności i 
-            pomocy drugiej osoby, ale także odpowiedniego pojazdu, który przetransportuje wszystkie te gabaryty we wskazane miejsce. Tutaj firma oferująca 
-            <strong>transport mebli w Krakowie </strong> będzie kluczowym aspektem pomocy. 
+            </div>
+        </div>
+  </section>
+
+  <section class="about_section layout_padding" data-aos="fade-down" data-aos-duration="1000">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 offset-md-1">
+          <div class="detail-box pr-md-2">
+
+            <p class="fs-4 font-italic text-center text-black mb-0">
+              Pracownicy takiej firmy z pewnością dołożą wszelkich starań, aby pomóc klientowi znieść wszystkie te niewygodne w przenoszeniu elementy wyposażenia, 
+              a także zabezpieczą je w trakcie transportu, aby nie doszło do uszkodzenia. 
+              <b>Firmy transportowe w Krakowie</b> mają ogromne doświadczenie w tym zakresie, dlatego doskonale wiedzą, w jaki sposób zabezpieczyć mienie. 
+              <b>Transport mebli w Krakowie</b>> nie musi oznaczać uszkodzeń wyposażenia nowego mieszkania, ponieważ pracownicy wiedzą, jak się obchodzić z takimi elementami i jak je zabezpieczyć. 
           </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 text-white showcase-img"></div>
-        <div class="col-lg-6 my-auto showcase-text">
-          <p class="mb-0 text-center">
-            Pracownicy takiej firmy z pewnością dołożą wszelkich starań, aby pomóc klientowi znieść wszystkie te niewygodne w przenoszeniu elementy wyposażenia, 
-            a także zabezpieczą je w trakcie transportu, aby nie doszło do uszkodzenia. 
-            <b>Firmy transportowe w Krakowie</b> mają ogromne doświadczenie w tym zakresie, dlatego doskonale wiedzą, w jaki sposób zabezpieczyć mienie. 
-            <b>Transport mebli w Krakowie</b>> nie musi oznaczać uszkodzeń wyposażenia nowego mieszkania, ponieważ pracownicy wiedzą, jak się obchodzić z takimi elementami i jak je zabezpieczyć. 
-        </p>
-        </div>
-      </div>
-      <div class="row no-gutters">
-        <div class="col-lg-6 order-lg-2 text-white showcase-img"></div>
-        <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+
           <p class="mb-0 text-center">
             Samodzielne transportowanie mebli samochodem osobowym jest po pierwsze niewygodne, po drugie czasochłonne (w końcu nie będziesz w stanie zabrać wszystkich rzeczy za pierwszym kursem), 
-            a także niebezpieczne, zwłaszcza jeśli nie wiesz, jak przewozić meble i jak je zabezpieczyć. Właśnie z tego powodu znacznie lepszym pomysłem jest wynajęcie specjalistów, którzy oferują <b>przeprowadzki w Krakowie</b>> i w innych rejonach.                           
+            a także niebezpieczne, zwłaszcza jeśli nie wiesz, jak przewozić meble i jak je zabezpieczyć. Właśnie z tego powodu znacznie lepszym pomysłem jest wynajęcie specjalistów, którzy oferują <b>przeprowadzki w Krakowie</b> i w innych rejonach.                           
         </p>
+
+
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-fluid ">
+            <img src="images/a-3.jpg" class="img-fluid" alt="about img">
+          </div>
         </div>
       </div>
-      </div>
+    </div>
   </section>
+
 
 
   <!-- footer section -->
